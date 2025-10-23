@@ -1,0 +1,21 @@
+/* BASE = CUSTOM VARIABLES AND CSS RESET  */
+@import url(./Base/variable.css);
+@import url(./Base/reset.css);
+
+/* COMPONENTS  */
+@import url(./Components/scoreCard.css);
+@import url(./Components/cardLayout.css);
+
+/* UTILS  */
+@import url(./utils/helper.css);
+
+.interactive-comments-section-container {
+    max-width: var(--container-md);
+    margin-inline: auto;
+    margin-block: var(--space-2xl);
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: var(--space-md)
+}

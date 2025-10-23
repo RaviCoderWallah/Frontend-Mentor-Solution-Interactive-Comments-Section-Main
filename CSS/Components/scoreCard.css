@@ -1,0 +1,7 @@
+.comments-card__score > div:first-of-type{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-grey-50);
+    padding: var(--btn-padding-sm);
+    border-radius: var(--radius-md);
+}
