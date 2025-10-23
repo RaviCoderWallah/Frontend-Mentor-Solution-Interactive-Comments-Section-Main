@@ -1,17 +1,102 @@
-/* ### Primary
+:root {
+    /* =============== COLORS  ==================== */
 
-- Purple 600: hsl(238, 40%, 52%)
-- Pink 400: hsl(358, 79%, 66%)
-- Purple 200: hsl(239, 57%, 85%)
-- Pink 200: hsl(357, 100%, 86%)
+    /* PRIMARY COLORS  */
+    --clr-purple-600: hsl(238, 40%, 52%);
+    --clr-pink-400: hsl(358, 79%, 66%);
+    --clr-purple-200: hsl(239, 57%, 85%);
+    --clr-pink-200: hsl(357, 100%, 86%);
 
-### Neutral
+    /* NEUTRAL COLORS  */
+    --clr-grey-800: hsl(212, 24%, 26%);
+    --clr-grey-500: hsl(211, 10%, 45%);
+    --clr-grey-100: hsl(223, 19%, 93%);
+    --clr-grey-50: hsl(228, 33%, 97%);
+    --clr-white: hsl(0, 100%, 100%);
+    --clr-black: hsl(0, 0%, 0%);
 
-- Grey 800: hsl(212, 24%, 26%)
-- Grey 500: hsl(211, 10%, 45%)
-- Grey 100: hsl(223, 19%, 93%)
-- Grey 50: hsl(228, 33%, 97%)
-- White: hsl(0, 100%, 100%)
+    /* =============== TYPOGRAPHY  ==================== */
 
-- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
-- Weights: 400, 500, 700 */
+    /* FONT FAMILY  */
+    --font-family-base: "Rubik", sans-serif;
+
+
+    /* FONT WEIGHT  */
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+
+
+    /* FONT SIZES */
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-md: 1.125rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.5rem;
+    --fs-2xl: 2rem;
+    --fs-3xl: 3rem;
+
+    /* LINE HEIGHTS */
+    --lh-tight: 1.2;
+    --lh-normal: 1.5;
+    --lh-loose: 1.8;
+
+    /* =============== SPACING  ==================== */
+
+    --space-xxs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+
+
+    /* BORDER RADIUS */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 50%;
+
+    /* 🪞 SHADOWS */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+    /* =============== LAYOUT  ==================== */
+
+    /*  CONTAINER WIDTHS */
+    --container-sm: 540px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+
+    /* =============== COMPONENTS  ==================== */
+
+
+    /*  BORDER STYLES */
+    --border-light: 1px solid rgba(0, 0, 0, 0.1);
+    --border-dark: 1px solid rgba(0, 0, 0, 0.3);
+
+    /* BUTTON SIZES */
+    --btn-padding-sm: 0.25rem 0.75rem;
+    --btn-padding-md: 0.5rem 1rem;
+    --btn-padding-lg: 0.75rem 1.5rem;
+
+    /*  IMAGE SIZES */
+    --img-sm: 32px;
+    --img-md: 64px;
+    --img-lg: 128px;
+
+    /* =============== MOTION / INTERACTION  ==================== */
+
+    /* TRANSITIONS */
+    --transition-fast: all 0.2s ease-in;
+    --transition-normal: all 0.3s ease-in-out;
+    --transition-slow: all 0.5s ease-out;
+
+}
