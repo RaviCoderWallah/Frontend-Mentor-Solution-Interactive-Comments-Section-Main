@@ -1,3 +1,5 @@
+/* COLORS BASED */
+
 .text-purple-600 {
     color: var(--clr-purple-600);
 }
@@ -26,6 +28,46 @@
   color: var(--clr-black);
 }
 
+/* LAYOUT BASED  */
+
+.flex{
+    display: flex;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.gap-1{
+    gap: var(--space-xs)
+}
+
+.gap-2{
+    gap: var(--space-xl)
+}
+
+/* SPACING BASED  */
+
+.p-1{
+    padding: var(--space-xxs);
+}
+
+.p-2{
+    padding: var(--space-xs);
+}
+
+/* BORDER RADIUS  */
+
+.radius-sm{
+    border-radius: var(--radius-sm);
+}
+
+.radius-md{
+    border-radius: var(--radius-md);
+}
+
+/* BACKGROUND COLOR BASED  */
+
 .bg-purple-600{
     background-color: var(--clr-purple-600);
 }
@@ -33,6 +75,8 @@
 .bg-purple-200{
     background-color: var(--clr-purple-200);
 }
+
+/* TYPOGRAPHY BASED  */
 
 .fw-md {
     font-weight: var(--fw-500);
@@ -42,6 +86,6 @@
     font-weight: var(--fw-700);
 }
 
-img.width-sm{
+.width-sm{
      width: var(--img-sm);
 }

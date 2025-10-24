@@ -3,6 +3,7 @@
 @import url(./Base/reset.css);
 
 /* COMPONENTS  */
+@import url(./Components/button.css);
 @import url(./Components/scoreCard.css);
 @import url(./Components/cardLayout.css);
 

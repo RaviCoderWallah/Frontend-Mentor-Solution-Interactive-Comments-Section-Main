@@ -1,0 +1,11 @@
+button {
+    padding: var(--btn-padding-lg);
+    border-radius: var(--radius-md);
+    text-transform: uppercase;
+    font-weight: var(--fw-500);
+    transition: var(--transition-fast);
+}
+
+button:hover{
+  background-color: var(--clr-purple-200);
+}

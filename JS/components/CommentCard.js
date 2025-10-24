@@ -8,6 +8,8 @@ export const commentCard = (
     score,
     userName,
     userImage,
+    currentUserName,
+    replyingTo = "",
     className = ""
 ) => {
     const commentContent = `
@@ -28,17 +30,41 @@ export const commentCard = (
                             <div class="user-image">
                                 <img src="${userImage}" alt="">
                             </div>
+                            ${
+                                userName == currentUserName 
+                                ? 
+                                "<span class='bg-purple-600 text-white p-1 radius-sm'>you</span>" 
+                                : 
+                                "" 
+                            }
                             <p class="user-name">${userName}</p>
                             <p class="comment-create-date text-grey-500">${createdDate}</p>
                         </div>
                         <div class="comment-reply">
-                            <img src="./images/icon-reply.svg" alt="">
-                            <p class="text-purple-600 fw-md">Reply</p>
+                        ${ 
+                            userName == currentUserName 
+                            ? 
+                            `
+                             <div class="flex items-center gap-1">
+                               <img src="/images/icon-delete.svg"/>
+                               <p>Delete</p>
+                             </div>
+                             <div class="flex items-center gap-1">
+                               <img src="/images/icon-edit.svg"/>
+                               <p>Edit</p>
+                             </div>
+                            `
+                            : 
+                            `<img src="./images/icon-reply.svg" alt="">
+                            <p class="text-purple-600 fw-md">Reply</p>` 
+                        }
+
                         </div>
                     </div>
                     <div class="user-comment">
                         <p class="text-grey-500">
-                           ${content}
+                            ${replyingTo ? `<span class="text-purple-600 fw-md">@${replyingTo}</span> ` : ""} 
+                            </span> ${content}
                         </p>
                     </div>
                 </div>

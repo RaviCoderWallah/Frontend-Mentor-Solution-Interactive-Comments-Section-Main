@@ -44,7 +44,7 @@
     cursor: pointer;
 }
 
-.comment-reply:hover p {
+.comment-reply p:hover {
     color: var(--clr-purple-200);
 }
 
@@ -73,14 +73,11 @@ textarea {
     width: 32rem;
     min-height: 5rem;
     resize: none;
-    border: 2px solid var(--clr-grey-800);
+    border: 2px solid var(--clr-grey-100);
     border-radius: var(--radius-md);
     padding: var(--space-xs)
 }
 
-button {
-    padding: var(--btn-padding-lg);
-    border-radius: var(--radius-md);
-    text-transform: uppercase;
-    font-weight: var(--fw-500);
+textarea:focus{
+    border-color: var(--clr-grey-800);
 }
