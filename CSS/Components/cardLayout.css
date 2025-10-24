@@ -52,3 +52,35 @@
     font-weight: var(--fw-500);
     color: var(--clr-grey-800);
 }
+
+/* current user  */
+.active-user-comment {
+    max-width: var(--container-md);
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    background-color: var(--clr-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-md);
+    margin-block: var(--space-md);
+    position: sticky;
+    bottom: var(--space-md);
+}
+
+textarea {
+    width: 32rem;
+    min-height: 5rem;
+    resize: none;
+    border: 2px solid var(--clr-grey-800);
+    border-radius: var(--radius-md);
+    padding: var(--space-xs)
+}
+
+button {
+    padding: var(--btn-padding-lg);
+    border-radius: var(--radius-md);
+    text-transform: uppercase;
+    font-weight: var(--fw-500);
+}

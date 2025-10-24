@@ -18,10 +18,30 @@
     color: var(--clr-grey-500);
 }
 
+.text-white{
+  color: var(--clr-white);
+}
+
+.text-black{
+  color: var(--clr-black);
+}
+
+.bg-purple-600{
+    background-color: var(--clr-purple-600);
+}
+
+.bg-purple-200{
+    background-color: var(--clr-purple-200);
+}
+
 .fw-md {
     font-weight: var(--fw-500);
 }
 
 .fw-bold {
     font-weight: var(--fw-700);
+}
+
+img.width-sm{
+     width: var(--img-sm);
 }
