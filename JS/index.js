@@ -1,33 +1,51 @@
 import { commentCard } from "./components/CommentCard.js";
-import { getComments } from "./utils/fetchData.js";
+import replyBoxEventHandler from "./components/ReplyBox.js";
+import { CONFIG } from "./Constants/config.js";
+import { loadComments } from "./services/api.js";
+import { getFromStorage, saveToStorage } from "./utils/storage.js";
 
-const commentsData = await getComments("/API/data.json");
+let commentsData = getFromStorage(CONFIG.STOARAGE_KEY);
 
-const showCommentsCard = () => {
+const showCommentsCard = (data) => {
+    const currentUserName = data.currentUser.username;
 
-    let currentUserName = commentsData.currentUser.username;
-
-
-    commentsData.comments.forEach((comment) => {
-        const { content, createdAt, score, user } = comment;
+    data.comments.forEach((comment) => {
+        const { content, createdAt, score, user, replies } = comment;
         const userName = user.username;
         const userImage = user.image.png;
-        const replies = comment.replies;
 
-       
+        // Render main comment
         commentCard(content, createdAt, score, userName, userImage, currentUserName);
 
-        if (replies && replies.length !== 0) {
+        // Render replies if any
+        if (replies && replies.length > 0) {
             replies.forEach((reply) => {
-                const { content, createdAt, score, user,replyingTo } = reply;
+                const { content, createdAt, score, user, replyingTo } = reply;
                 const userName = user.username;
                 const userImage = user.image.png;
-
-
                 commentCard(content, createdAt, score, userName, userImage, currentUserName, replyingTo, "nested");
             });
         }
     });
 };
 
-showCommentsCard();
+// ✅ Logic for first-time load
+if (commentsData === null) {
+    // Load from your JSON file (first time only)
+    loadComments(CONFIG.API_URL).then((fetchedData) => {
+
+        commentsData = fetchedData;
+
+        // Save it into localStorage for future refreshes
+        saveToStorage(CONFIG.STOARAGE_KEY, fetchedData);
+
+        // Show comments from file
+        showCommentsCard(fetchedData);
+    });
+} else {
+    // Load from localStorage (after refresh)
+    showCommentsCard(commentsData);
+}
+
+// Enable reply/comment box
+replyBoxEventHandler();

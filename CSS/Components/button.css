@@ -9,3 +9,8 @@ button {
 button:hover{
   background-color: var(--clr-purple-200);
 }
+
+button:disabled{
+  background-color: var(--clr-grey-500);
+  cursor: no-drop;
+}

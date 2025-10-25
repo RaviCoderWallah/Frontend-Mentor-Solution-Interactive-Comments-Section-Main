@@ -47,11 +47,11 @@ export const commentCard = (
                             `
                              <div class="flex items-center gap-1">
                                <img src="/images/icon-delete.svg"/>
-                               <p>Delete</p>
+                               <p class="delete-btn">Delete</p>
                              </div>
                              <div class="flex items-center gap-1">
                                <img src="/images/icon-edit.svg"/>
-                               <p>Edit</p>
+                               <p class="edit-btn">Edit</p>
                              </div>
                             `
                             : 

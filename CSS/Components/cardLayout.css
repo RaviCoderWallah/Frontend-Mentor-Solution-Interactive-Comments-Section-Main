@@ -5,11 +5,19 @@
     gap: var(--space-lg);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
+    min-width: var(--container-md);
 }
 
 .interactive-comments-card.nested {
     max-width: var(--container-sm);
+    min-width: 0;
 }
+
+.comments-card__comments,
+.user-profile{
+    width: 100%;
+}
+
 
 .user-profile {
     display: flex;
@@ -65,8 +73,8 @@
     box-shadow: var(--shadow-md);
     padding: var(--space-md);
     margin-block: var(--space-md);
-    position: sticky;
-    bottom: var(--space-md);
+    /* position: sticky;
+    bottom: var(--space-md); */
 }
 
 textarea {
