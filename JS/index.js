@@ -8,23 +8,23 @@ import { getFromStorage, saveToStorage } from "./utils/storage.js";
 let commentsData = getFromStorage(CONFIG.STOARAGE_KEY);
 
 const showCommentsCard = (data) => {
-    const currentUserName = data.currentUser.username;
+    const currentUserName = data?.currentUser?.username;
 
-    data.comments.forEach((comment) => {
-        const { content, createdAt, score, user, replies } = comment;
-        const userName = user.username;
-        const userImage = user.image.png;
+    data?.comments?.forEach((comment) => {
+        const {id, content, createdAt, score, user, replies } = comment;
+        const userName = user?.username;
+        const userImage = user?.image.png;
 
         // Render main comment
-        commentCard(content, createdAt, score, userName, userImage, currentUserName);
+        commentCard(id, content, createdAt, score, userName, userImage, currentUserName);
 
         // Render replies if any
         if (replies && replies.length > 0) {
             replies.forEach((reply) => {
-                const { content, createdAt, score, user, replyingTo } = reply;
+                const {id, content, createdAt, score, user, replyingTo } = reply;
                 const userName = user.username;
                 const userImage = user.image.png;
-                commentCard(content, createdAt, score, userName, userImage, currentUserName, replyingTo, "nested");
+                commentCard(id, content, createdAt, score, userName, userImage, currentUserName, replyingTo, "nested");
             });
         }
     });

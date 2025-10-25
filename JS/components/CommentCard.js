@@ -3,6 +3,7 @@ import { SELECTORS } from "../Constants/selectors.js";
 
 
 export const commentCard = (
+    commentId = "124",
     content,
     createdDate,
     score,
@@ -75,6 +76,8 @@ export const commentCard = (
         `interactive-comments-card${className ? " " + className : ""}`,
         commentContent
     );
+
+    commentCard.setAttribute("data-id", commentId);
 
     SELECTORS.commentsContainer.appendChild(commentCard);
 
