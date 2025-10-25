@@ -1,4 +1,5 @@
 import { commentCard } from "./components/CommentCard.js";
+import modal from "./components/Modal.js";
 import replyBoxEventHandler from "./components/ReplyBox.js";
 import { CONFIG } from "./Constants/config.js";
 import { loadComments } from "./services/api.js";
@@ -49,3 +50,6 @@ if (commentsData === null) {
 
 // Enable reply/comment box
 replyBoxEventHandler();
+
+//What occurs when user's clck on delete btn 
+modal();

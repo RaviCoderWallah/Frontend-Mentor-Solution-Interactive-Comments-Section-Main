@@ -89,3 +89,7 @@
 .width-sm{
      width: var(--img-sm);
 }
+
+.hidden{
+    display: none;
+}

@@ -5,6 +5,7 @@ import { commentCard } from "./CommentCard.js";
 import { CONFIG } from "../Constants/config.js";
 import { getFromStorage, saveToStorage } from "../utils/storage.js";
 import { score } from "./ScoreBox.js";
+import { timeAgo } from "../utils/helper.js";
 
 const replyBoxEventHandler = () => {
     let commentValue;
@@ -27,8 +28,9 @@ const replyBoxEventHandler = () => {
         const newCommentData = {
             id: crypto.randomUUID(),
             content: SELECTORS.textarea.value.trim(),
-            createdAt: "a few seconds ago",
-            score: 0,
+            // store the ISO timestamp; compute human-readable elapsed time when rendering
+            createdAt: new Date().toISOString(),
+            score: score,
             user: {
                 image: {
                     png: "./images/avatars/image-juliusomo.webp",
@@ -52,13 +54,13 @@ const replyBoxEventHandler = () => {
 
         // 4️⃣ Save back to localStorage
         saveToStorage(CONFIG.STOARAGE_KEY, entireData);
-
         // 5️⃣ Show immediately on UI
         const userName = newCommentData.user.username;
         const userImage = newCommentData.user.image.png;
+        // compute human-readable elapsed time for display
         commentCard(
             newCommentData.content,
-            newCommentData.createdAt,
+            timeAgo(newCommentData.createdAt),
             newCommentData.score,
             userName,
             userImage,

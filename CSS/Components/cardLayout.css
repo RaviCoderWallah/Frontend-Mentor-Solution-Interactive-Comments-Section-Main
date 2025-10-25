@@ -89,3 +89,18 @@ textarea {
 textarea:focus{
     border-color: var(--clr-grey-800);
 }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.interactive-comments-card,
+.active-user-comment {
+    animation: slideIn 0.3s ease-out;
+}

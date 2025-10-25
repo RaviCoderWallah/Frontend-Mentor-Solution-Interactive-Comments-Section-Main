@@ -81,3 +81,14 @@ export const commentCard = (
     return commentCard;
 }
 
+
+export const showCommentCardWithAnimation = (commentCard) => {
+    commentCard.style.opacity = 0;
+    commentCard.style.transform = "translateY(20px)";
+    commentCard.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+
+    requestAnimationFrame(() => {
+        commentCard.style.opacity = 1;
+        commentCard.style.transform = "translateY(0)";
+    });
+}

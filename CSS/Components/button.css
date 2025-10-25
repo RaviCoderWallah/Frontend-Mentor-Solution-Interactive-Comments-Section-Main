@@ -14,3 +14,7 @@ button:disabled{
   background-color: var(--clr-grey-500);
   cursor: no-drop;
 }
+
+button:active{
+  transform: scale(1.2);
+}

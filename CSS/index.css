@@ -6,6 +6,7 @@
 @import url(./Components/button.css);
 @import url(./Components/scoreCard.css);
 @import url(./Components/cardLayout.css);
+@import url(./Components/modal.css);
 
 /* UTILS  */
 @import url(./utils/helper.css);
